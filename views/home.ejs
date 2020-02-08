@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Qrcode</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="nav justify-content-center">
+    <div class="card border-primary mb-3" style="max-width: 18rem;margin-top: 20px;">
+        <div class="card-header">User Details</div>
+        <div class="card-body text-primary">
+            <form action="/" method="post">
+                <input type="text" name="name" placeholder="enter the name" class="form-control"><br>
+                <input type="text" name="phno" placeholder="enter the phone number" class="form-control"><br>
+               <div class="text-center"> <input type="submit" value="get qrcode" class="btn"> </div> 
+             </form>
+        </div>
+      </div>
+    </div>
+    <%if(data){%> 
+        <div class="text-center">
+         <h5>Scan QRCode</h5>
+        <img src="<%=data%>" alt="" style="width:100px; height:100px;">
+         </div>
+    <%}%>  
+</body>
+</html>
